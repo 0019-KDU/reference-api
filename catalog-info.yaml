@@ -1,0 +1,29 @@
+# Backstage catalog entry. Annotations connect this component to its tools:
+#   GitHub repo + Actions runs, TechDocs (docs/), ECS service status (dev).
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: reference-api
+  description: Reference Node.js service deployed to AWS ECS Fargate by the DevOps94 golden path
+  annotations:
+    github.com/project-slug: 0019-KDU/reference-api
+    backstage.io/techdocs-ref: dir:.
+    aws.amazon.com/amazon-ecs-service-arn: arn:aws:ecs:ap-south-1:697502032879:service/devops94-idp-cluster/reference-api-dev
+  tags:
+    - nodejs
+    - aws-ecs
+  links:
+    - url: http://devops94-idp-alb-1896325251.ap-south-1.elb.amazonaws.com/dev/reference-api/
+      title: Dev environment
+      icon: web
+    - url: https://ap-south-1.console.aws.amazon.com/cloudwatch/home?region=ap-south-1#logsV2:log-groups/log-group/$252Fecs$252Fdevops94-idp-svc-reference-api-dev
+      title: Logs (CloudWatch)
+      icon: dashboard
+    - url: https://ap-south-1.console.aws.amazon.com/ecs/v2/clusters/devops94-idp-cluster/services/reference-api-dev/health?region=ap-south-1
+      title: ECS service (AWS console)
+      icon: cloud
+spec:
+  type: service
+  lifecycle: production
+  owner: group:default/platform-admins
+  system: idp-demo

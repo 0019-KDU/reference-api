@@ -1,0 +1,7 @@
+site_name: reference-api
+site_description: Reference service of the DevOps94 IDP golden path
+nav:
+  - Overview: index.md
+  - Operations: operations.md
+plugins:
+  - techdocs-core
