@@ -8,6 +8,8 @@ metadata:
   annotations:
     github.com/project-slug: 0019-KDU/reference-api
     backstage.io/techdocs-ref: dir:.
+    # Costs tab: everything tagged component=reference-api
+    aws.amazon.com/cost-insights-tags: component=reference-api
     aws.amazon.com/amazon-ecs-service-arn: arn:aws:ecs:ap-south-1:697502032879:service/devops94-idp-cluster/reference-api-dev
   tags:
     - nodejs

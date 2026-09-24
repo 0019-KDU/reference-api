@@ -11,7 +11,7 @@ variable "image_tag" {
 locals {
   name = "reference-api"
   tags = {
-    owner  = "platform-admins" # Backstage Group that owns this service
+    owner  = "group:default/platform-admins" # Backstage owner (entity ref), used for team cost reports
     system = "idp-demo"
   }
 }
